@@ -1,11 +1,11 @@
 package com.example.math_run
 
-import android.app.ProgressDialog.show
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
+
 import android.widget.*
-import kotlin.math.roundToLong
+
 
 class MainActivity : AppCompatActivity() {
 
