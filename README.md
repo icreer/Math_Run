@@ -1,7 +1,7 @@
 # Math_Run
 
 ## Overview
-This is an app that helps people with doing mental math. So there is basic arthmitic problems and a selection of maltible choice and there job is to select the right one. My goal in creating this program is to have a deaper understanding of how apps and other technolgy that I use day. Alos to challange my abiltyis as a software engineer. 
+This is an app that helps people with doing mental math. So there is basic arthmitic problems and a selection of maltible choice and there job is to select the right one. My goal in creating this program is to have a deaper understanding of how apps and other technolgy that I use daily. Alos to challange my abiltyis as a software engineer. 
 ## Walk Through and Demo Video
 
 ## Development Enviroment 
