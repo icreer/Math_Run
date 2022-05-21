@@ -3,10 +3,8 @@ package com.example.math_run
 import android.app.ProgressDialog.show
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.provider.MediaStore
+import android.widget.*
 import kotlin.math.roundToLong
 
 class MainActivity : AppCompatActivity() {
@@ -19,15 +17,39 @@ class MainActivity : AppCompatActivity() {
         rollButton.setOnClickListener {
             setContentView(R.layout.screentwo)
             val rollButton2: Button = findViewById(R.id.Next)
+            val answerA : RadioButton = findViewById(R.id.a)
+            val answerB : RadioButton = findViewById(R.id.b)
+            val answerC : RadioButton = findViewById(R.id.c)
+            val answerD : RadioButton = findViewById(R.id.d)
             rollButton2.setOnClickListener {
                 val varible1 = rollDice()
                 val varible2 = rollDice2()
                 val operator = function()
                 show(varible1,varible2,operator)
-                showclick()
-                val resultTextView: TextView = findViewById(R.id.textView3)
-                resultTextView.text = operator.toString()
+
+                answerA.setOnClickListener{
+                    if (operator == 1){
+                        showclick()
+                    }
+                }
+                answerB.setOnClickListener{
+                    if (operator ==  3){
+                        showclick()
+                    }
+                }
+                answerC.setOnClickListener{
+                    if (operator == 4){
+                        showclick()
+                    }
+                }
+                answerD.setOnClickListener{
+                    if (operator == 2){
+                        showclick()
+                    }
+                }
+
             }
+
             //dice()
         }
 
@@ -50,24 +72,54 @@ class MainActivity : AppCompatActivity() {
 
     private fun show(a : Int, b : Int, operator : Int){
         val resultTextView: TextView = findViewById(R.id.a)
+        val bTextView : TextView = findViewById(R.id.b)
+        val cTextView : TextView = findViewById(R.id.c)
+        val dTextView : TextView = findViewById(R.id.d)
         //resultTextView.text = k.toString()
         val k : Double
+        val l : Double
+        val w : Double
+        val j : Double
         //val p : Boolean
         if (operator == 1){
             k = a.toDouble() + b.toDouble()
+            l = 2.0 * a.toDouble() + b.toDouble()
+            w = 9.0 + a.toDouble() + b.toDouble()
+            j = 10.0 - a.toDouble() + b.toDouble()
             resultTextView.text = k.toString()
+            bTextView.text = l.toString()
+            cTextView.text = w.toString()
+            dTextView.text = j.toString()
         }
         else if (operator == 2){
             k =  a.toDouble() * b
-            resultTextView.text = k.toString()
+            l = 2.0 - a.toDouble() * b.toDouble()
+            w = 9.0  * a.toDouble() * b.toDouble()
+            j = 10.0 - a.toDouble() * b.toDouble()
+            resultTextView.text = j.toString()
+            bTextView.text = l.toString()
+            cTextView.text = w.toString()
+            dTextView.text = k.toString()
         }
         else if (operator == 3){
-            k = a.toDouble() - b
-            resultTextView.text = k.toString()
+            k = b.toDouble() - a.toDouble()
+            l = 2.0 - a.toDouble() - b.toDouble()
+            w = 9.0 - a.toDouble() - b.toDouble()
+            j = 10.0 - a.toDouble() - b.toDouble()
+            resultTextView.text = l.toString()
+            bTextView.text = k.toString()
+            cTextView.text = w.toString()
+            dTextView.text = j.toString()
         }
         else if (operator == 4){
-            k = a.toDouble() / b.toDouble()
-            resultTextView.text = k.toString()
+            k = b.toDouble() / a.toDouble()
+            l = 2.0 * a.toDouble() / b.toDouble()
+            w = 9.0 / a.toDouble() * b.toDouble()
+            j = 10.0 - a.toDouble() / b.toDouble()
+            resultTextView.text = w.toString()
+            bTextView.text = l.toString()
+            cTextView.text = k.toString()
+            dTextView.text = j.toString()
         }
     }
 
