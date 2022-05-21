@@ -5,8 +5,8 @@ This is an app that helps people with doing mental math. So there is basic arthm
 ## Walk Through and Demo Video
 
 ## Development Enviroment 
-Android Studio
-Kotlin
+* Android Studio
+* Kotlin
 
 ## Useful Websites
 * [Android Basics in Kotlin]{https://developer.android.com/courses/android-basics-kotlin/course}
