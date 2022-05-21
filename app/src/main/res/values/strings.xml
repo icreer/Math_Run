@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Math_Run</string>
+    <string name="Start_game">Start Game</string>
+    <string name="Welcome">Welcome, To Math Run</string>
+    <string name="Input">Input</string>
+    <string name="Sum">Sum Of Rolls</string>
+    <string name="Operator">Operator</string>
+    <string name="number1">Number 1</string>
+    <string name="number2">Number 2</string>
+    <string name="Numbercorrect">Number Correct:0</string>
+    <string name="NextQuestion">Next Question</string>
+    <string name="Goal">Your goal is to get as many math questions that you can right</string>
+    <string name="d">d</string>
+    <string name="c">c</string>
+    <string name="b">b</string>
+    <string name="a">a</string>
+</resources>
