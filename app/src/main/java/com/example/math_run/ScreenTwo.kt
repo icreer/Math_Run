@@ -11,7 +11,7 @@ class ScreenTwo : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.screentwo)
+        setContentView(R.layout.screentwo)
         val rollButton2: Button = findViewById(R.id.Next)
 
         rollButton2.setOnClickListener {
